@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/pruebaProductos', function(){
+    $productos  = Product::where('available',false)->get();
+    foreach($productos as $producto){
+        echo ($producto->price);
+        echo("<br>");
+    }
+
+});
