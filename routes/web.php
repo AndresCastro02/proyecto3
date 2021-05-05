@@ -1,5 +1,10 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Order;
+use App\Models\Product;
+use App\Models\User;
+use Database\Seeders\ProductsSeeder;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +18,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pruebaProductos', function(){
-    $productos  = Product::where('available',false)->get();
-    foreach($productos as $producto){
-        echo ($producto->price);
-        echo("<br>");
-    }
+
+// productos?cats=1,2,3,4
+Route::get('/productos', function () {
+
+    $productos = Product::where('available',true)->get();
+
+    //dd($productos[0]->images[0]->url);
+    return view('components.products', compact('productos'));
 
 });

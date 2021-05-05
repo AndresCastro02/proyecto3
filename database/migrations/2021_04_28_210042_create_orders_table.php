@@ -14,6 +14,7 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
+            $table->charset ='utf8mb4';
             $table->id();
             $table->timestamps();
             $table->enum('payment',['cc', 'paypal','crypto'])->default('cc');
