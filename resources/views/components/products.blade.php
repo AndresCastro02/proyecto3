@@ -51,7 +51,7 @@
 
                                                     <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
 
-                                                        <img class="aspect__img" src="images/product/electronic/product2.jpg" alt=""></a>
+                                                        <img class="aspect__img" src="{{count($prod->images)>0 ?$prod->images[0]->url:''}}" alt=""></a>
                                                     <div class="product-o__action-wrap">
                                                         <ul class="product-o__action-list">
                                                             <li>

@@ -36,7 +36,7 @@ class ImagesSeeder extends Seeder
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
                 'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
                 'url'=> $faker->imageUrl($width = 640, $height = 480),
-                'product_id'=> $faker->numberBetween(1,50),
+                'product_id'=> $faker->numberBetween(1,4),
             ]);
         }
     }

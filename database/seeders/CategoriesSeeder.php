@@ -16,7 +16,7 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        for ($i = 0; $i < 50; $i++){
+        for ($i = 0; $i < 4; $i++){
             DB::table('categories')->insert([
                 'created_at'=>$faker->dateTime($max ='now', $timezone = null),
                 'updated_at'=>$faker->dateTime($max = 'now', $timezone = null),

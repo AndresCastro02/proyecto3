@@ -20,8 +20,8 @@ class products_has_categoriesSeeder extends Seeder
             DB::table('products_has_categories')->insert([
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
                 'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
-                'product_id' => $faker->numberBetween(1, 50),
-                'category_id' => $faker->numberBetween(1, 50),
+                'product_id' => $faker->numberBetween(1, 4),
+                'category_id' => $faker->numberBetween(1, 4),
             ]);
         }
     }
