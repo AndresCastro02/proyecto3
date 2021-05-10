@@ -20,33 +20,37 @@ class ProductsSeeder extends Seeder
             DB::table('products')->insert([[
                 'name'=> 'Duke 200ng',
                 'description' => 'Sport',
-                'price' => $faker->numberBetween(10000,1000000),
+                'price' => 11900000,
                 'available' => 1,
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
-                'updated_at' => $faker->dateTime($max = 'now', $timezone = null)
+                'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
+                'video' => 'https://www.youtube.com/embed/93uQdQa71ws'
             ],
             [
                 'name'=> 'Yamaha R15',
                 'description' => 'Super Sports',
-                'price' => $faker->numberBetween(10000,1000000),
+                'price' => 12000000,
                 'available' => 1,
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
-                'updated_at' => $faker->dateTime($max = 'now', $timezone = null)
+                'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
+                'video' => "https://www.youtube.com/embed/lX8y6zLcsNg"
             ],[
                 'name'=> 'Apache 200',
                 'description' => 'Street',
-                'price' => $faker->numberBetween(10000,1000000),
+                'price' => 8200000,
                 'available' => 1,
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
-                'updated_at' => $faker->dateTime($max = 'now', $timezone = null)
+                'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
+                'video' => 'https://www.youtube.com/embed/kx4JmXIOvDc'
                 
             ],[
                 'name'=> 'pulsar 200',
                 'description' => 'Street',
-                'price' => $faker->numberBetween(10000,1000000),
+                'price' => 9500000,
                 'available' => 1,
                 'created_at' => $faker->dateTime($max = 'now', $timezone = null),
-                'updated_at' => $faker->dateTime($max = 'now', $timezone = null)
+                'updated_at' => $faker->dateTime($max = 'now', $timezone = null),
+                'video' => "https://www.youtube.com/embed/nWm8dl289jo"
            
             ]]);
 

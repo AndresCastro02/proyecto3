@@ -2,9 +2,10 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use Illuminate\Database\Seeder;
-use Faker\Factory as Faker;
 use Illuminate\Support\Facades\DB;
+use Faker\Factory as Faker;
 
 class CategoriesSeeder extends Seeder
 {
@@ -16,13 +17,19 @@ class CategoriesSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-        for ($i = 0; $i < 4; $i++){
-            DB::table('categories')->insert([
+                DB::table('categories')->insert([
+                [
                 'created_at'=>$faker->dateTime($max ='now', $timezone = null),
                 'updated_at'=>$faker->dateTime($max = 'now', $timezone = null),
-                'name' => 'categorie'.$i
-            ]);
-        }
+                'name' => 'sport'
+                ],
+                [  
+                'created_at'=>$faker->dateTime($max ='now', $timezone = null),
+                'updated_at'=>$faker->dateTime($max = 'now', $timezone = null),
+                'name' => 'street'             
+                ],
+                ]
+            );
+     }
         
-    }
 }

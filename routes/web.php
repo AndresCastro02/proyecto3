@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\User;
 use Database\Seeders\ProductsSeeder;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
@@ -33,3 +35,7 @@ Route::get('/productos', function () {
     return view('components.products', compact('productos'));
 
 });
+*/
+
+
+Route::resource('products', ProductController::class);
